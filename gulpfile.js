@@ -59,15 +59,15 @@ gulp.task('browser-sync', function () {
 gulp.task('default', ['htmlpage', 'scripts', 'styles', 'browser-sync'], function() {
 
 	gulp.watch('./src/*.html', function() {
-    	gulp.run('htmlpage', 'browser-sync');
+    	gulp.run('htmlpage');
   	});
 
   	gulp.watch('./src/scripts/*.js', function() {
-    	gulp.run('jshint', 'scripts', 'browser-sync');
+    	gulp.run('jshint', 'scripts');
 	});
  
   	gulp.watch('./src/styles/*.css', function() {
-		gulp.run('styles', 'browser-sync');
+		gulp.run('styles');
 	});
 
 });
